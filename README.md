@@ -1,25 +1,27 @@
-To install the conda env: 
+# Bayesian Estimation of MPI missing variables for Cambodia
 
-conda create -c conda-forge -n pymc_env "pymc>=5"
+## Env
+To install the conda env: 
+```
+conda env create -f environment.yml
 conda activate pymc_env
-conda install geopandas rasterio fiona seaborn scikit-gstat ipywidgets
+```
 
 Or follow the instructions on: https://www.pymc.io/projects/docs/en/stable/installation.html
 
-Notebooks structure: 
-
+## Notebooks structure: 
 - Notebook 1 downloads the necessary data from Google Drive
 	- Google drive API credentials are needed in the form of a client_secrets.json file
 - Notebook 2 applies the covariates selection process (Lasso) and dimensionality reduction
 - Notebook 3 trains the Bayesian geostatistical model and makes predictions for unknown locations in batches
 - Notebook 4 analyses predictions and plots maps 
 
-The process of adding GIS layers is handled in the global-layers-integration folder. There:
+The process of adding GIS layers is handled in the `global-layers-integration` folder. There:
 
 - Notebook 1 downloads all the layers necessary to build a covariate matrix 
 - Notebook 2 integrates more covariates into a single shape file
 - Various .py files are need and included in the folder
 
-functions.py file contains functions used throughout
+`functions.py` file contains functions used throughout.
 
-The optional_notebooks contains some old notebooks that might be handy for other processes. 
+The `optional_notebooks` contains some old notebooks that might be handy for other processes. 

@@ -16,3 +16,4 @@ new-workspace.jupyterlab-workspace
 client_secrets.json
 model.pkl
 scaler_y.pkl
+.vscode/

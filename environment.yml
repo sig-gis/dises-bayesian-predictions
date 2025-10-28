@@ -1,0 +1,22 @@
+name: pymc_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pymc
+  - scikit-learn
+  - statsmodels
+  - seaborn
+  - contextily
+  - gcc
+  - gdal
+  - geopandas
+  - gxx
+  - rasterio
+  - scikit-gstat
+  - pysal
+  - ipywidgets
+  - ipykernel
+  - pip:
+      - PyPDF2
